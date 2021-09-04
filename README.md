@@ -14,7 +14,7 @@
 
 ***1. objetivo***
 
-    Compor série temporal da idade do fogo desde a ultima ocorrência de cicatrizes de fogo com a série temporal de cicatrizes do MapBiomas-Fogo col. 1 1985 a 2020
+Compor série temporal da idade do fogo desde a ultima ocorrência de cicatrizes de fogo com a série temporal de cicatrizes do MapBiomas-Fogo col. 1 1985 a 2020
   
   
 ***2. conteudo do repósitorio***
