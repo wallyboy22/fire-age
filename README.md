@@ -67,7 +67,7 @@ linha 1 |0 | 1
 linha 2 |1 | 0
 linha 3 |0 | 0
 
-Idade em 2000 | A   | B
+Idade      em 2000 | A   | B
 ---------|--------- | ------
 linha 1 |0 | 0
 linha 2 |0 | 0
@@ -79,7 +79,7 @@ linha 1 |0 | 1
 linha 2 |0 | 0
 linha 3 |0 | 0
 
-Idade em 2001 | A   | B
+Idade      em 2001 | A   | B
 ---------|--------- | ------
 linha 1 |0 | 1
 linha 2 |1 | 0
@@ -91,7 +91,7 @@ linha 1 |0 | 0
 linha 2 |0 | 0
 linha 3 |0 | 1
 
-Idade em 2002 | A   | B
+Idade      em 2002 | A   | B
 ---------|--------- | ------
 linha 1 |0 | 1
 linha 2 |2 | 0
@@ -103,7 +103,7 @@ linha 1 |0 | 0
 linha 2 |0 | 0
 linha 3 |0 | 0
 
-Idade em 2003 | A   | B
+Idade      em 2003 | A   | B
 ---------|--------- | ------
 linha 1 |0 | 2
 linha 2 |3 | 0
