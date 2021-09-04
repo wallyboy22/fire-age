@@ -123,6 +123,7 @@ nota: Essa estratégia é possivel por meio da estrutura de repetição .iterate
 
 - Obs 2: O gee parece "esquecer" os tipo dos objetos quando dentro de funções, sendo necessario redeclarar os seus tipos.
 
-
+- Analisar o resultado em memoria e exportar para um endereço de asset valido e compartilhado
+-  
 ***5. Script no Google Earth Engine***
 
