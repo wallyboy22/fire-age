@@ -115,10 +115,10 @@ linha 3 |0 | 1
 nota: Essa estratégia é possivel por meio da estrutura de repetição .iterate(), que recebe como argumento uma função e um objeto (opicional) como estado inicial.
 
 - Passos lógicos do algoritimo em looping
- - 1. estimar o acumulado até o ano do looping    
- - 2. estimar o que queimou no ano do looping
- - 3. somar um a todas as areas que ja pegaram fogo em anos anteriores
- - 4. mascarar as areas que pegaram fogo este ano
+   1. estimar o acumulado até o ano do looping    
+   2. estimar o que queimou no ano do looping
+   3. somar um a todas as areas que ja pegaram fogo em anos anteriores
+   4. mascarar as areas que pegaram fogo este ano
 
 - A saída deve ser uma imagem multibandas de 1986 a 2021
 
