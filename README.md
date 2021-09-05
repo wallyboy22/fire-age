@@ -14,12 +14,11 @@
 
 ***1. objetivo***
 
-Compor série temporal da idade do fogo desde a ultima ocorrência de cicatrizes segundo a série do MapBiomas-Fogo col. 1 1985 a 2020
-Este dado entre outras coisas será utilizado como input do para outro calculo de emissões de carbono.
+Compor série temporal da idade do fogo desde a ultima ocorrência anual de cicatrizes, segundo a série do MapBiomas-Fogo col. 1 - 1985 a 2020, com a finalidade de servir como input na uma modelagem de emissões de carbono do SEEG.
   
 ***2. conteudo do repósitorio***
 
-Este repositório guarda os passos para composição do dado da idade do fogo contendo de fato:
+Este repositório guarda os passos para composição do dado de idade do fogo, contendo de fato:
   
   [x] - modelo lógico, utilizado como referencia para construção do script
   
@@ -29,9 +28,9 @@ Este repositório guarda os passos para composição do dado da idade do fogo co
   
   [ ] - endereço e descrição do dado 
   
-  [ ] - script em JS utilizado para visualizar o dado
+  [ ] - script explorando a visualização do dado
   
-  [ ] - gif de de exemplo
+  [ ] - gifs e mapas explorando o dado
 
 
 ***3. Modelo de idade do fogo***
