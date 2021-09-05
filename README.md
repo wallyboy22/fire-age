@@ -114,15 +114,117 @@ linha 3 |0 | 1
 - Construir uma coleção de imagens de cicatrizes de fogo e iterar uma função sobre os elementos da lista, consideranto o retorno da função aplicada ao elemento anterior.
 nota: Essa estratégia é possivel por meio da estrutura de repetição .iterate(), que recebe como argumento uma função e um objeto (opicional) como estado inicial.
 
-- A função, escrita pelo usuario, deve considerar dois argumentos, o elemento da lista e o valor de retorno da iteração anterior. 
+- Passos lógicos do algoritimo em looping
+ - 1. estimar o acumulado até o ano do looping    
+ - 2. estimar o que queimou no ano do looping
+ - 3. somar um a todas as areas que ja pegaram fogo em anos anteriores
+ - 4. mascarar as areas que pegaram fogo este ano
 
-- O estado inicial da função, é utilizado para configurar uma espécie de "pré-retorno", utilizado como  argumento de entrada da função na passagem pelo primento elemento da lista
+- A saída deve ser uma imagem multibandas de 1986 a 2021
 
-- Obs 1: não é possivel debugar a função com print, como alternativa é necessario programar um retorno valido a analisar ele.
-
-- Obs 2: O gee parece "esquecer" os tipo dos objetos quando dentro de funções, sendo necessario redeclarar os seus tipos.
-
-- Analisar o resultado em memoria e exportar para um endereço de asset valido e compartilhado
--  
 ***5. Script no Google Earth Engine***
 
+
+
+```js
+var scars = 'projects/mapbiomas-workspace/public/collection6/mapbiomas-fire-collection1-annual-burned-coverage-1';
+
+scars = ee.Image(scars);
+
+var bandNames = ee.List.sequence(1985,2020,1);
+
+print(bandNames);
+function fireAge (current, previous){
+  
+  // - 0º passo, variaveis de controle
+  var year = ee.Number(current).int();
+  var yearPost = year.add(1);
+
+  // - 1º passo, estimar o acumulado até o ano do looping    
+  // estimando posição da lista no lopping
+  var sliceIndex = bandNames.indexOf(current);
+  sliceIndex = ee.Number(sliceIndex).add(1);
+  var sliceList = bandNames.slice(0,sliceIndex,1);
+
+  // mapeando lista com as imagens de fogo do ano
+  var alreadyBurned = sliceList.map(function(y){
+    return scars.select([ee.String('burned_coverage_').cat(ee.Number(y).int())])
+      .rename('classification');
+  });
+  // reduzindo ela a uma unica imagem
+  alreadyBurned = ee.ImageCollection(alreadyBurned).mosaic().byte();
+  // definindo valor unifome em todos os pixels
+  alreadyBurned = ee.Image(1).updateMask(alreadyBurned).byte();
+  
+  // - 2º passo, estimar o que queimou no ano do looping    
+  var burnedThisYear = ee.Image(1).updateMask(scars.select([ee.String('burned_coverage_').cat(year)]))
+    .byte();
+
+  // - 3º passo, somar um a todas as areas que ja pegaram fogo em anos anteriores
+  var newImage = ee.Image(previous)
+    .select(ee.String('classification_').cat(year))
+    .add(alreadyBurned).byte();
+
+  // - 4º passo, mascarar as areas que pegaram fogo este ano
+    newImage = newImage.blend(burnedThisYear);
+
+
+  return ee.Image(previous)
+    .addBands(
+      newImage.rename(ee.String('classification_').cat(yearPost))
+    );
+ 
+}
+
+var first = ee.Image(0).mask(0).rename('classification_1985');
+// var first = ee.Image(0).mask(0).rename('burned_coverage_1985');
+
+var fireAgeImage = bandNames.iterate(fireAge,first);
+
+fireAgeImage = ee.Image(fireAgeImage);
+
+print(fireAgeImage);
+
+// //  --- --- --- --- --- ---  ----  --- ---  --- ---  ---  ---  ---  ---  --- --- ---
+
+var palette = [
+  ['ffffff','F8D71F','DAA118','BD6C12','9F360B','810004','4D0709'],
+  ['001219','000080','0000ff','0a9396','005f73','94d2bd','ee9b00','ca6702','bb3e03','ae2012','9b2226','800000']
+];
+palette = palette[1];
+
+
+
+var visParams = {
+  bands:['classification_2020'],
+  min:1,
+  max:36,
+  palette:palette.reverse()
+};
+
+Map.addLayer(fireAgeImage,visParams,'idade do fogo');
+
+var description = 'projects/mapbiomas-workspace/FOGO1/fire-age-v1';
+
+var bands = fireAgeImage.bandNames().slice(1);
+
+print(bands);
+
+Export.image.toAsset({
+  image:fireAgeImage.select(bands),
+  description:description,
+  assetId:description,
+  // pyramidingPolicy:,
+  // dimensions:,
+  region:geometry,
+  scale:30,
+  // crs:,
+  // crsTransform:,
+  maxPixels:1e13,
+  // shardSize:
+});
+
+```
+
+Link para script com visualização em memoria
+https://code.earthengine.google.com/4fda9961330acd5e7c2dfef7b47b00e7
