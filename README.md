@@ -226,5 +226,43 @@ Export.image.toAsset({
 
 ```
 
-Link para script com visualização em memoria
-https://code.earthengine.google.com/4fda9961330acd5e7c2dfef7b47b00e7
+***Dados principais - Mapbiomas Fogo col. 1***: 
+
+- asset final 
+```projects/mapbiomas-workspace/FOGO1/mapbiomas-fire-collection1-fire-age-v1```
+
+- Export e visualização em memoria 
+    - https://code.earthengine.google.com/4fda9961330acd5e7c2dfef7b47b00e7
+
+- visualização com o asset 
+    - https://code.earthengine.google.com/4fda9961330acd5e7c2dfef7b47b00e7
+
+Dado de referencia MCD64A1 
+- asset final 
+```projects/mapbiomas-workspace/FOGO1/internal-version-esa-mcd64a1-fire-age-v1```
+
+- Export e visualização em memoria 
+    - https://code.earthengine.google.com/4182a85a4c73fee8c6f1807e91f57ff1
+
+- visualização com o asset 
+    - 
+
+Dado de referencia FireCCI
+- asset final 
+```projects/mapbiomas-workspace/FOGO1/internal-version-esa-firecci-fire-age-v1```
+
+- Export e visualização em memoria 
+    - https://code.earthengine.google.com/806e4059922edcd80a020f542f89982f
+
+- visualização com o asset 
+    - 
+
+Dado de referencia FIRMS
+- asset final 
+```projects/mapbiomas-workspace/FOGO1/internal-version-esa-firms-fire-age-v1```
+
+- Export e visualização em memoria 
+    - https://code.earthengine.google.com/6ad528a5c2ecc307e920df51e83ddca4
+
+- visualização com o asset 
+    - 
