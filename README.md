@@ -54,9 +54,9 @@ Para este trabalho todos os pixels não mascarados são remapeados para terem va
 
 - A interação ano a ano foram desenhadas obdecendo as seguindo as seguintes regras
   - ***Cicatrizes*** se refere a serie de dados original e ***Idade*** se refere a saída do modelo
-  - O dado de idade inicia no segundo ano da série de cicatrizes 
-  - Todos os pixels marcados como cicatriz no ano anterior recebem valor 1 no ano corrente do dado de idade
-  - Os pixeis que ja registraram ocorrência de fogo em anos anteriores, mas não no ano anterior somam 1
+  - O dado de idade inicia no segundo ano da série de cicatrizes e termina um ano após o final da série
+  - Os pixeis que ja registraram ocorrência de fogo ao menos uma vez em anos anteriores, somam 1
+  - Todos os pixels marcados como cicatriz no ano imediatamente anterior recebem valor 1 no ano corrente do dado de idade
 
 - Representação simples da interação entre imagens de cicatrizes e idade, representadas como tabelas de 2 colunas por 3 linhas:
 
@@ -66,7 +66,13 @@ linha 1 |0 | 1
 linha 2 |1 | 0
 linha 3 |0 | 0
 
-Idade      em 2000 | A   | B
+Acumulado até 2000 | A   | B
+---------|--------- | ------
+linha 1 |0 | 1
+linha 2 |1 | 0
+linha 3 |0 | 0
+
+Idade do fogo em 2000 | A   | B
 ---------|--------- | ------
 linha 1 |0 | 0
 linha 2 |0 | 0
@@ -78,7 +84,13 @@ linha 1 |0 | 1
 linha 2 |0 | 0
 linha 3 |0 | 0
 
-Idade      em 2001 | A   | B
+Acumulado até 2001 | A   | B
+---------|--------- | ------
+linha 1 |0 | 1
+linha 2 |1 | 0
+linha 3 |0 | 0
+
+Idade do fogo em 2001 | A   | B
 ---------|--------- | ------
 linha 1 |0 | 1
 linha 2 |1 | 0
@@ -90,7 +102,13 @@ linha 1 |0 | 0
 linha 2 |0 | 0
 linha 3 |0 | 1
 
-Idade      em 2002 | A   | B
+Acumulado até 2000 | A   | B
+---------|--------- | ------
+linha 1 |0 | 1
+linha 2 |1 | 0
+linha 3 |0 | 1
+
+Idade do fogo em 2002 | A   | B
 ---------|--------- | ------
 linha 1 |0 | 1
 linha 2 |2 | 0
@@ -102,7 +120,13 @@ linha 1 |0 | 0
 linha 2 |0 | 0
 linha 3 |0 | 0
 
-Idade      em 2003 | A   | B
+Acumulado até 2000 | A   | B
+---------|--------- | ------
+linha 1 |0 | 1
+linha 2 |1 | 0
+linha 3 |0 | 1
+
+Idade do fogo em 2003 | A   | B
 ---------|--------- | ------
 linha 1 |0 | 2
 linha 2 |3 | 0
@@ -238,6 +262,8 @@ Export.image.toAsset({
 - visualização com o asset 
  
 -
+
+obs: os foram repetidos para os outros dados de cicatrizes apresentados a baixo:
 Dado de referencia MCD64A1 
 - asset final 
 ```projects/mapbiomas-workspace/FOGO1/internal-version-esa-mcd64a1-fire-age-v1```
