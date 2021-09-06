@@ -24,13 +24,15 @@ Este repositório guarda os passos para composição do dado de idade do fogo, c
   
   [x] - planejamento da estratégia de processamento no GEE
   
-  [ ] - script em JS utilizado para gerar asset no GEE
+  [x] - script em JS utilizado para gerar asset no GEE
   
   [ ] - endereço e descrição do dado 
   
-  [ ] - script explorando a visualização do dado
+  [x] - script explorando a visualização do dado
   
   [ ] - gifs e mapas explorando o dado
+  
+  [ ] - dados de área no datastudio
 
 
 ***3. Modelo de idade do fogo***
@@ -260,8 +262,7 @@ Export.image.toAsset({
     - https://code.earthengine.google.com/4fda9961330acd5e7c2dfef7b47b00e7
 
 - visualização com o asset 
- 
--
+   - https://code.earthengine.google.com/264088946e4288673086a921ddd70419 
 
 obs: os foram repetidos para os outros dados de cicatrizes apresentados a baixo:
 Dado de referencia MCD64A1 
