@@ -271,7 +271,7 @@ Dado de referencia FIRMS
 
 
 ***Gif dos dados de idade do fogo sobre Rondonia-BR***
-![GIF da Idade do Fogo de 1986 a 2021 Sobre Rondonia e norte do Mato Grosso](url da imagem gerado pelo serviço de hospedagem ou GitHub)
+![GIF da Idade do Fogo de 1986 a 2021 Sobre Rondonia e norte do Mato Grosso](https://github.com/wallyboy22/fire-age/blob/main/idade%20do%20fogo%20em%20rondonia%201986%20a%202021.gif)
 
 ***Link para Google Data Studio***
 Com a informação da série temporal de idade cruzada com Unidades Federativas e Biomas e extraida para tabelas
