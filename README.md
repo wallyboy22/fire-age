@@ -268,3 +268,11 @@ Dado de referencia FireCCI
 
 Dado de referencia FIRMS
 ```projects/mapbiomas-workspace/FOGO1/internal-version-esa-firms-fire-age-v1```
+
+
+***Gif dos dados de idade do fogo sobre Rondonia-BR***
+
+***Link para Google Data Studio***
+Com a informação da série temporal de idade cruzada com Unidades Federativas e Biomas e extraida para tabelas
+```https://datastudio.google.com/reporting/750cadfb-5812-4f21-8573-0ca7af573f45/page/idcZC```
+
