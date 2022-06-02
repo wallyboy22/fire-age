@@ -30,9 +30,9 @@ Este repositório guarda os passos para composição do dado de idade do fogo, c
   
   [x] - script explorando a visualização do dado
   
-  [ ] - gifs e mapas explorando o dado
+  [x] - gifs e mapas explorando o dado
   
-  [ ] - dados de área no datastudio
+  [x] - dados de área no datastudio
 
 
 ***3. Modelo de idade do fogo***
@@ -271,6 +271,7 @@ Dado de referencia FIRMS
 
 
 ***Gif dos dados de idade do fogo sobre Rondonia-BR***
+![GIF da Idade do Fogo de 1986 a 2021 Sobre Rondonia e norte do Mato Grosso](url da imagem gerado pelo serviço de hospedagem ou GitHub)
 
 ***Link para Google Data Studio***
 Com a informação da série temporal de idade cruzada com Unidades Federativas e Biomas e extraida para tabelas
