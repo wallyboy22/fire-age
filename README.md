@@ -270,7 +270,7 @@ Dado de referencia FIRMS
 ```projects/mapbiomas-workspace/FOGO1/internal-version-esa-firms-fire-age-v1```
 
 Script de visualização
-````
+````js
 // TIER 2 SEEG_Firedyn 
 // Author: Camila Silva, Aline Pontes-Lopes, Wallace Silva
 // Last Edited:  09 September 2021
@@ -401,20 +401,6 @@ var panel = ui.Panel({
 });
 
 Map.add(panel);
-//  --- --- --- --- --- ---  ----  --- ---  --- ---  ---  ---  ---  ---  --- --- ---
-© 2022 GitHub, Inc.
-Terms
-Privacy
-Security
-Status
-Docs
-Contact GitHub
-Pricing
-API
-Training
-Blog
-About
-Loading complete
 ````
 
 ***Gif dos dados de idade do fogo sobre Rondonia-BR***
