@@ -400,7 +400,7 @@ var panel = ui.Panel({
   }
 });
 
-Map.add(panel);
+Map.add(panel); 
 ````
 
 ***Gif dos dados de idade do fogo sobre Rondonia-BR***
